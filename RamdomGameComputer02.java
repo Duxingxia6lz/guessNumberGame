@@ -5,6 +5,7 @@ import java.util.Random;
 public class RamdomGameComputer02 {
 /*
 * 让电脑自己猜自己出的数字.
+* 随机数
 * */
 
     public static void main(String[] args) {
@@ -28,6 +29,7 @@ public class RamdomGameComputer02 {
                 guessNum =r.nextInt(maxLimt-minLimt+1) + minLimt;//在minNum和maxNum之间求一个随机数.
                 count++;
                 System.out.println("目标范围是:" + minLimt + "到" + maxLimt);
+                System.out.println("范围大小"+(maxLimt-minLimt));
                 System.out.println("================");
 
             } else if (guessNum < aimNum) {
@@ -37,14 +39,18 @@ public class RamdomGameComputer02 {
                 count++;
 
                 System.out.println("目标范围是:" + minLimt + "到" + maxLimt);
+                System.out.println("范围大小"+(maxLimt-minLimt));
                 System.out.println("================");
 
             } else {
                 System.out.println("此时的数字为:" + guessNum + ",共用" + count + "次");
+                System.out.println("目标是:" + aimNum);
                 break;
             }
 
         }
+
+        System.out.println("机会用尽,GameOver!");
     }
 }
 

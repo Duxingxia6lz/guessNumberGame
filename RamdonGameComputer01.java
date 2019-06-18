@@ -27,6 +27,7 @@ public class RamdonGameComputer01 {
                 guessNum = (minLimt + maxLimt) / 2;
                 count++;
                 System.out.println("目标范围是:" + minLimt + "到" + maxLimt);
+                System.out.println("范围大小"+(maxLimt-minLimt));
                 System.out.println("================");
 
             } else if (guessNum < aimNum) {
@@ -36,13 +37,18 @@ public class RamdonGameComputer01 {
                 count++;
 
                 System.out.println("目标范围是:" + minLimt + "到" + maxLimt);
+                System.out.println("范围大小"+(maxLimt-minLimt));
                 System.out.println("================");
 
             } else {
                 System.out.println("此时的数字为:" + guessNum + ",共用" + count + "次");
+                System.out.println("目标是:" + aimNum);
                 break;
             }
 
         }
+
+        System.out.println("机会用尽,GameOver!");
+
     }
 }
